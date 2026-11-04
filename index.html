@@ -1,5 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Don't Look Away</title>
+<title>Don’t Look Away: An Oral History of the Li and Huang Families</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+SC:wght@400;600&family=Courier+Prime:ital@0;1&family=Homemade+Apple&family=ZCOOL+XiaoWei&family=Caveat:wght@500&family=Long+Cang&display=swap">
 <style>
@@ -828,6 +827,7 @@ a.pto{color:inherit;text-decoration:none;border-bottom:1px dotted var(--red)}
 [id]{scroll-margin-top:140px}
 @media (max-width:720px){[id]{scroll-margin-top:110px}}
 /* /people */
+.hero h1 .subt{display:block;font-family:var(--f-en);font-style:normal;font-weight:500;font-size:.5em;letter-spacing:-.005em;line-height:1.15;margin-top:16px;color:var(--ink)}
 </style>
 
 <div class="wrap">
@@ -857,7 +857,7 @@ a.pto{color:inherit;text-decoration:none;border-bottom:1px dotted var(--red)}
     <section class="hero">
       <div>
         <div class="eyebrow">A CITIZEN HISTORIAN’S ARCHIVE<span class="zh"> · 一个公民历史学者的档案</span></div>
-        <h1>Don’t Look Away <span class="zht">不 要 转 过 脸 去</span></h1>
+        <h1>Don’t Look Away <span class="subt">An Oral History of the Li and Huang Families</span><span class="zht">不 要 转 过 脸 去</span></h1>
         <div class="byline hand">
           <span class="zh">四代人的口述史，重新讲述 —— Isabel Yilan Li</span>
           <span class="en">four generations, recorded and retold — Isabel Yilan Li</span>
@@ -1797,7 +1797,7 @@ a.pto{color:inherit;text-decoration:none;border-bottom:1px dotted var(--red)}
     try{localStorage.setItem('dla-lang',l)}catch(e){}
   }
   var saved=null; try{saved=localStorage.getItem('dla-lang')}catch(e){}
-  if(!saved) saved=/^zh/i.test((navigator.languages&&navigator.languages[0])||navigator.language||'')?'zh':'en';
+  if(!saved) saved='en';
   setLang(saved);
   document.querySelectorAll('[data-set]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set)})});
 
@@ -1832,5 +1832,3 @@ a.pto{color:inherit;text-decoration:none;border-bottom:1px dotted var(--red)}
   window.addEventListener('hashchange',route); route();
 })();
 </script>
-
-</body></html>
