@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Don’t Look Away: An Oral History of the Li and Huang Families. Four generations, recorded and retold by Isabel Yilan Li.">
+<script>
+/* ===== 在这里改两处 / EDIT HERE ===== */
+window.CONTACT_EMAIL = "zyiyi@yahoo.com";
+/* 留言板用 giscus：从 giscus.app 复制下面四项 */
+window.GISCUS = {
+  repo:       "cloudyli2026/citizenhistorianisabelli",
+  repoId:     "R_kgDOViKbZw",
+  category:   "Show and tell",
+  categoryId: "DIC_kwDOViKbZ84DKcCW"
+};
+/* ==================================== */
+</script>
 <title>Don’t Look Away: An Oral History of the Li and Huang Families</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+SC:wght@400;600&family=Courier+Prime:ital@0;1&family=Homemade+Apple&family=ZCOOL+XiaoWei&family=Caveat:wght@500&family=Long+Cang&display=swap">
@@ -834,6 +846,13 @@ a.pto{color:inherit;text-decoration:none;border-bottom:1px dotted var(--red)}
 @media (max-width:720px){[id]{scroll-margin-top:110px}}
 /* /people */
 .hero h1 .subt{display:block;font-family:var(--f-en);font-style:normal;font-weight:500;font-size:.5em;letter-spacing:-.005em;line-height:1.15;margin-top:16px;color:var(--ink)}
+.guestbook{margin:44px 0 0;padding-top:18px;border-top:2px solid var(--ink);max-width:44em}
+.guestbook h2{font-size:var(--t-label);letter-spacing:.14em;color:var(--red);margin:0 0 8px;font-weight:400}
+.gb-intro{margin:0 0 4px;font-size:var(--t-h3)}
+.gb-note{margin:0 0 16px;font-family:var(--f-type);font-size:12px;color:var(--ink-soft)}
+.gb-mail{margin:18px 0 0;font-family:var(--f-type);font-size:13px}
+.gb-mail a{color:var(--red)}
+#cusdis_thread{min-height:40px}
 </style>
 
 </head>
@@ -1217,6 +1236,15 @@ a.pto{color:inherit;text-decoration:none;border-bottom:1px dotted var(--red)}
     <section class="thanks">
       <h2 class="type"><span class="zh">致谢</span><span class="en">THANK YOU</span></h2>
       <ul><li><b><span class="zh">爷爷、奶奶</span><span class="en">My grandparents</span></b><span><span class="zh">讲了很多从没讲过的事</span><span class="en">for telling what they had never told</span></span></li><li><b><span class="zh">秦奶奶</span><span class="en">Grandma’s aunt</span></b><span><span class="zh">百岁时仍愿意回忆</span><span class="en">for remembering at over a hundred</span></span></li><li><b><span class="zh">李文通老师</span><span class="en">Li Wentong</span></b><span><span class="zh">讲解满族与清西陵的历史</span><span class="en">for the history of the Manchus and the Qing tombs</span></span></li><li><b><span class="zh">爸爸、妈妈</span><span class="en">Mom and Dad</span></b><span><span class="zh">开车、提问、陪伴</span><span class="en">for driving, asking, and being there</span></span></li><li><b><span class="zh">隆昌、筠连、五道河的亲戚</span><span class="en">Relatives in Longchang, Junlian and Wudaohe</span></b><span><span class="zh">带路、上坟、留饭</span><span class="en">for showing the way, the graves, and dinner</span></span></li><li><b><span class="zh">族中长辈</span><span class="en">Elders of the Huang clan</span></b><span><span class="zh">1986 年编成族谱</span><span class="en">for compiling the genealogy in 1986</span></span></li></ul>
+    </section>
+  
+    <section class="guestbook" id="guestbook">
+      <h2 class="type"><span class="zh">留言</span><span class="en">LEAVE A NOTE</span></h2>
+      <p class="gb-intro"><span class="zh">谢谢你读到这里。想说什么，都可以写在下面。</span><span class="en">Thank you for reading this far. Whatever you’d like to say, write it below.</span></p>
+      <p class="gb-note"><span class="zh">留言需要登录 GitHub。没有账号的话，也可以直接写信给我。</span><span class="en">Leaving a note needs a GitHub account. If you don’t have one, you can also write to me.</span></p>
+      <div id="cusdis_thread" class="giscus"></div>
+      <p class="gb-pending" hidden><span class="zh">留言板即将开放。</span><span class="en">The guestbook is opening soon.</span></p>
+      <p class="gb-mail"><span class="zh">也可以写信给我：</span><span class="en">Or write to me: </span><a id="gb-mail" href="#">…</a></p>
     </section>
   </main>
 
@@ -1833,6 +1861,7 @@ a.pto{color:inherit;text-decoration:none;border-bottom:1px dotted var(--red)}
       show('archive'); var d=document.getElementById(h); if(d){d.open=true; setTimeout(function(){d.scrollIntoView()},30)} return;
     }
     if((m=h.match(/^(echo|obj|w)-[a-z]+$/)) && document.getElementById(h)){show({echo:'echoes',obj:'objects',w:'women'}[m[1]]); var ee=document.getElementById(h); setTimeout(function(){ee.scrollIntoView()},30); return;}
+    if(h==='guestbook'){show('methods'); setTimeout(function(){var g=document.getElementById('guestbook'); if(g) g.scrollIntoView();},40); return;}
     var r=simple[h]||'home'; show(r);
     var el=h!==r?document.getElementById(h):null;
     if(el) el.scrollIntoView(); else window.scrollTo(0,0);
@@ -1846,5 +1875,26 @@ window.goatcounter={path:function(p){return location.pathname+(location.hash||''
 window.addEventListener('hashchange',function(){if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count()});
 </script>
 <script data-goatcounter="https://dontlookaway.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var em=window.CONTACT_EMAIL||'', a=document.getElementById('gb-mail');
+  if(a){ if(em.indexOf('@')>0 && em.indexOf('example.com')<0){ a.textContent=em.replace('@',' [at] '); a.href='mai'+'lto:'+em; } else { a.parentNode.hidden=true; } }
+  var g=window.GISCUS||{}, box=document.getElementById('cusdis_thread');
+  if(!box) return;
+  if(!g.repoId || g.repoId.indexOf('PASTE')===0){ box.hidden=true; document.querySelector('.gb-pending').hidden=false; return; }
+  function load(){
+    box.innerHTML='';
+    var s=document.createElement('script'); s.src='https://giscus.app/client.js'; s.async=true; s.crossOrigin='anonymous';
+    var zh=document.documentElement.dataset.l==='zh';
+    var at={'data-repo':g.repo,'data-repo-id':g.repoId,'data-category':g.category,'data-category-id':g.categoryId,
+      'data-mapping':'specific','data-term':'guestbook','data-strict':'1','data-reactions-enabled':'1','data-emit-metadata':'0',
+      'data-input-position':'top','data-theme':'preferred_color_scheme','data-lang':zh?'zh-CN':'en','data-loading':'lazy'};
+    for(var k in at) s.setAttribute(k,at[k]);
+    box.appendChild(s);
+  }
+  load();
+  document.addEventListener('click',function(e){ if(e.target.closest&&e.target.closest('.lang button')) setTimeout(load,50); });
+})();
+</script>
 </body>
 </html>
